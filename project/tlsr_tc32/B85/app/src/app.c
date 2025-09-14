@@ -86,8 +86,6 @@ void user_init(void)
 void main_loop(void)
 {
     if (do_debounce) {
-        do_debounce = 0;
-
         sleep_ms(DEBOUNCE_MS);
 
         if (!gpio_read(IRQ_PIN)) {
@@ -95,6 +93,8 @@ void main_loop(void)
                 led_idx = 0;
             }
         }
+
+        do_debounce = 0;
     }
     else {
         sleep_ms(1);
