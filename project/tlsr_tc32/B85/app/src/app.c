@@ -48,7 +48,7 @@ void user_init(void)
     for (int i = 0; i < NUM_OF_LEDS; i++) {
         gpio_set_func(leds[i], AS_GPIO);
         gpio_set_output_en(leds[i], 1);   /* enable output */
-        gpio_set_input_en(leds[i],0);     /* disable input */
+        gpio_set_input_en(leds[i], 0);     /* disable input */
         gpio_write(leds[i], 0);           /* LED Off */
     }
 
@@ -65,9 +65,9 @@ void user_init(void)
     gpio_set_input_en(KEY3 ,0);         /* disable input */
 
     /* Initialize interrupt detection input pin */
-    gpio_set_func(IRQ_PIN ,AS_GPIO);
+    gpio_set_func(IRQ_PIN, AS_GPIO);
     gpio_set_output_en(IRQ_PIN, 0); 	/* disable output */
-    gpio_set_input_en(IRQ_PIN ,1);	    /* enable input */
+    gpio_set_input_en(IRQ_PIN, 1);	    /* enable input */
 
     /* Configure IRQ_PIN to receive falling edge interrupts. In this way, when
      * KEY3 is pressed, there will be a falling edge on IRQ_PIN.
