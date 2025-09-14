@@ -44,7 +44,7 @@ static const GPIO_PinTypeDef leds[] =
 
 void user_init(void)
 {
-	/* Initialize the LED pins, for indication */
+    /* Initialize the LED pins, for indication */
     for (int i = 0; i < NUM_OF_LEDS; i++) {
         gpio_set_func(leds[i], AS_GPIO);
         gpio_set_output_en(leds[i], 1);   /* enable output */
@@ -54,9 +54,9 @@ void user_init(void)
 
     /*
      * Button matrix table:
-     * 	        KEY3    KEY4
-     * 	KEY1    SW2	    SW3
-     * 	KEY2    SW4	    SW5
+     *             KEY3    KEY4
+     *     KEY1    SW2     SW3
+     *     KEY2    SW4     SW5
      */
 
     /* Initialization signal generation output pin */
@@ -66,8 +66,8 @@ void user_init(void)
 
     /* Initialize interrupt detection input pin */
     gpio_set_func(IRQ_PIN, AS_GPIO);
-    gpio_set_output_en(IRQ_PIN, 0); 	/* disable output */
-    gpio_set_input_en(IRQ_PIN, 1);	    /* enable input */
+    gpio_set_output_en(IRQ_PIN, 0);     /* disable output */
+    gpio_set_input_en(IRQ_PIN, 1);      /* enable input */
 
     /* Configure IRQ_PIN to receive falling edge interrupts. In this way, when
      * KEY3 is pressed, there will be a falling edge on IRQ_PIN.
@@ -85,8 +85,8 @@ void user_init(void)
 
 void main_loop(void)
 {
-	if (do_debounce) {
-		do_debounce = 0;
+    if (do_debounce) {
+        do_debounce = 0;
 
         sleep_ms(DEBOUNCE_MS);
 
@@ -95,18 +95,18 @@ void main_loop(void)
                 led_idx = 0;
             }
         }
-	}
-	else {
+    }
+    else {
         sleep_ms(1);
         if (++ms_cnt >= TOGGLE_MS) {
 
-        	if (!do_debounce) {
-        	    gpio_toggle(leds[led_idx]);
+            if (!do_debounce) {
+                gpio_toggle(leds[led_idx]);
             }
 
-        	ms_cnt = 0;
+            ms_cnt = 0;
         }
-	}
+    }
 }
 
 /**
@@ -125,7 +125,7 @@ _attribute_ram_code_sec_noinline_ void irq_handler(void)
 
             do_debounce = 1;
         }
-	}
+    }
 }
 
 
