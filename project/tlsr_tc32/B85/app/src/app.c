@@ -62,7 +62,7 @@ void user_init(void)
     /* Initialization signal generation output pin */
     gpio_set_func(KEY3 ,AS_GPIO);
     gpio_set_output_en(KEY3, 1);        /* enable output */
-    gpio_set_input_en(KEY3 ,0);         /* disable input */
+    gpio_set_input_en(KEY3, 0);         /* disable input */
 
     /* Initialize interrupt detection input pin */
     gpio_set_func(IRQ_PIN, AS_GPIO);
