@@ -4,9 +4,9 @@
  * @brief   This is the header file for Telink MCU
  *
  * @author  Driver Group
- * @date    2025
+ * @date    2018
  *
- * @par     Copyright (c) 2025, Telink Semiconductor (Shanghai) Co., Ltd. ("TELINK")
+ * @par     Copyright (c) 2018, Telink Semiconductor (Shanghai) Co., Ltd. ("TELINK")
  *
  *          Licensed under the Apache License, Version 2.0 (the "License");
  *          you may not use this file except in compliance with the License.
@@ -32,20 +32,15 @@ extern "C" {
 /**
  * @brief Define system clock
  */
-#define CLOCK_SYS_CLOCK_HZ  16000000
+#define CLOCK_SYS_CLOCK_HZ 24000000
 
 /**
  * @note The sys_clock.h file depends on the definition of CLOCK_SYS_CLOCK_HZ so CLOCK_SYS_CLOCK_HZ must be placed before #include "sys_clock.h" without reversing the order.
  */
 #include "sys_clock.h"
 
-#define	 PWM_NORMAL			1
-#define	 PWM_COUNT			2
-#define	 PWM_IR				3
-#define	 PWM_IR_FIFO		4
-#define	 PWM_IR_DMA_FIFO	5
+#define IRQ_PIN                 KEY1
 
-#define	 PWM_MODE			1
 
 /* Disable C linkage for C++ Compilers: */
 #if defined(__cplusplus)

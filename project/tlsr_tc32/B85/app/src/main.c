@@ -41,7 +41,7 @@ int main (void)
 	user_init();
 
 	while (1) {
-		main_loop ();
+		main_loop();
 	}
 	return 0;
 }
