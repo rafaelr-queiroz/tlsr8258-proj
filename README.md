@@ -2,6 +2,13 @@
 
 This is a repository that serves as a starting point to develop a new application based on the MCU **TLSR8258** from Telink. The repository contains a template project based on **TLSR8258DK48** development board, which is powered with the **TLSR8258F512ET48** microncontroller. The template project is the usual _Hello World_ for embedded systems, i.e.: a Blink LED example
 
+## Useful links
+
+The usage of the following links is not mandatory in order to use the project template in this repository, but can be very helpful for future developments
+- [TLSR8258 datasheet](https://doc.telink-semi.cn/doc/datasheet/DS-TLSR8258-E_Datasheet_for_Telink_Multi-Standard_Wireless_SoC_TLSR8258.pdf)
+- [TLSR8258DK48 User Manual](https://doc.telink-semi.cn/doc/hardware/devboard/UM-TLSR8258-E_TLSR8258_Development_Board_User_Manual.pdf)
+- [TLSR8258DJ48 Reference Design (contains schematics)](https://doc.telink-semi.cn/doc/hardware/design_file/devboard/TLSR8258DK48D.zip)
+
 ## Environment
 
 By the time this template project was developed, the following tools/software were used:
