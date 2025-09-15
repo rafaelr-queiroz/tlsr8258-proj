@@ -46,3 +46,6 @@ The binary file generated through the building process can be downloaded on the 
 Also, there is a complete tutorial made by Telink on how to use BDT to download firmware on target device:
 - [BDT Tutorial (Windows)](https://doc.telink-semi.cn/doc/en/software/res/tools/bdt_wins/bdt_wins_en/)
 - [BDT Tutorial (Linux)](https://doc.telink-semi.cn/doc/en/software/res/tools/bdt_linux_mac/bdt_linux_mac_en/)
+
+
+After the MCU is programmed with the generated binary and the board is reset, LED1 should start blinking with a frequency of approximately 2 Hz. There are four LEDs on the **TLSR8258DK48** board, to change the LED that is blinking, press SW2
