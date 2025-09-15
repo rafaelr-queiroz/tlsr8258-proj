@@ -21,6 +21,23 @@ By the time this template project was developed, the following tools/software we
     - [SDK repository](https://github.com/telink-semi/tc_platform_sdk)
     - [SDK single zip (V3.3.0)](https://github.com/telink-semi/tc_platform_sdk/archive/refs/tags/V3.3.0.zip)
 
+## Project folder structure
+
+```
+├── app/
+│   ├── inc/
+│   │   ├── app_config.h  --> project header file
+│   ├── src/
+│   │   ├── app.c         --> project source file
+│   │   ├── main.c        --> main source file
+├── boot/                 --> startup code 
+├── common/               --> common header/source files for several MCUs
+├── drivers/              --> peripheral drivers
+├── link/                 --> linker scripts
+├── tlsr8258-proj/        --> binary outputs (created after first build)
+├── vendor/               --> clock conf. flash and calibration data for MCU
+```
+
 ## Building the project
 
 1. Clone this repository. 
