@@ -1,12 +1,12 @@
 /********************************************************************************************************
  * @file    app_config.h
  *
- * @brief   This is the header file for Telink MCU
+ * @brief   Header file for the Blink LED template for Telink MCU
  *
- * @author  Driver Group
- * @date    2018
+ * @author  Rafael Queiroz
+ * @date    2025
  *
- * @par     Copyright (c) 2018, Telink Semiconductor (Shanghai) Co., Ltd. ("TELINK")
+ * @par     Copyright    2018     Rafael Rodrigues Queiroz
  *
  *          Licensed under the Apache License, Version 2.0 (the "License");
  *          you may not use this file except in compliance with the License.
